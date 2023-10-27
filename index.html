@@ -2,10 +2,42 @@
 <html>
 <head>
     <title>Copy Code Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #0074d9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <p>To copy the code, click on "Copy code":</p>
-    <button id="copyButton">Copy code</button>
+    <div class="container">
+        <h1>Copy Code</h1>
+        <p>To copy the code, click on "Copy code":</p>
+        <button id="copyButton">Copy code</button>
+    </div>
 
     <script>
         // Function to copy the code to the clipboard
