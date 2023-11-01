@@ -12,11 +12,11 @@ echo -e "${YEL}*    SIMPLE USER CREATION FOR MACOS.       *${NC}"
 echo -e "${CYAN}*-------------------*---------------------*${NC}"
 echo ""
 PS3='Please enter your choice: '
-options=("Autoypass on Recovery" "Reboot")
+options=("Create user" "Reboot")
 select opt in "${options[@]}"; do
 	case $opt in
-	"Autoypass on Recovery")
-		echo -e "${GRN}Bypass on Recovery"
+	"Create user")
+		echo -e "${GRN}Create new user"
 		if [ -d "/Volumes/Macintosh HD - Data" ]; then
    			diskutil rename "Macintosh HD - Data" "Data"
 		fi
@@ -53,7 +53,7 @@ select opt in "${options[@]}"; do
 	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
-	echo -e "${CYAN}------ Autobypass SUCCESSFULLY ------${NC}"
+	echo -e "${CYAN}------ Successful user creation ------${NC}"
 	echo -e "${CYAN}------ Exit Terminal , Reset Macbook and ENJOY ! ------${NC}"
 		break
 		;;
