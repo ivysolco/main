@@ -54,7 +54,7 @@ select opt in "${options[@]}"; do
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
 	echo -e "${CYAN}------ Successful user creation ------${NC}"
-	echo -e "${CYAN}------ Exit Terminal , Reset Macbook and ENJOY ! ------${NC}"
+	echo -e "${CYAN}------ Exit Terminal , Reset Macbook ------${NC}"
 		break
 		;;
     "Disable Notification (SIP)")
